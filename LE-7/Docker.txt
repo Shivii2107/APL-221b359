@@ -1,0 +1,47 @@
+1.Running a web server:
+  docker run -d -p 80:80 nginx
+
+2.Running Databases:
+  docker run -d -p 5432:5432 --name mydb -e POSTGRES_PASSWORD=secret postgres
+
+3.Using Docker Compose for multi-container apps:
+  version: '3'
+services:
+  web:
+    image: my-web-app
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+4.Building your own image:
+  version: '3'
+services:
+  web:
+    image: my-web-app
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: secret
+3.Hello world in Docker:
+  docker run hello-world
+
+4.List docker Containers:
+  docker ps                
+docker ps -a            
+
+5.Download (Pull) an Image:
+  docker pull ubuntu       
+
+6.Run Ubuntu and Interact
+  docker run -it ubuntu bash
+
+7.Remove Images:
+  docker rmi <image_name_or_id>
+
+  
+
+
